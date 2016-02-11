@@ -1,0 +1,33 @@
+/*------------------------------------*/
+/*buttons*/
+
+.btn-cmn{
+	margin: 0;padding: ($line-height / 2) .9rem;text-align: center;border: 1px solid  #ddd;border-radius: .3em;background: #fff;cursor: pointer;transition: .3s;
+	&:hover,&:focus{
+		background: $color-hover;color: #fff;border-color: darken($color-hover, 10%);
+	}
+}
+
+%btn-icon{
+	width: 1.5rem;height: 1.5rem;border: 0;margin: 0;padding: 0;text-align: center;text-indent: 100%;white-space: nowrap;overflow: hidden;border-radius: .3rem;cursor: pointer;position: relative;
+	&:before{
+		content: '';width: 100%;height: 100%;position: absolute;top: 0;left: 0;text-align: center;
+	}
+	&:hover, &:focus{
+		background: $color-hover;
+	}
+}
+.btn-arrow-vertical{
+	@extend %btn-icon;
+	&:before{
+		content: '>';
+	}
+}
+
+/*------------------------------------*/
+/*misc*/
+%clearfix{
+	&:before{
+		content: '.';display: block;clear: both;visibility: hidden;height: 0;
+	}
+}
