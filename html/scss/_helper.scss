@@ -17,10 +17,45 @@
 		background: $color-hover;
 	}
 }
+.btn-icon{
+	@extend %btn-icon;
+}
 .btn-arrow-vertical{
 	@extend %btn-icon;
 	&:before{
 		content: '>';
+	}
+}
+
+/*------------------------------------*/
+/*widgets*/
+%widget{
+	> .widget-header{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		.widget-title{
+			flex-grow: 1;
+		}
+		.widget-toolbar{
+			align-self: flex-end;
+		}
+	}
+}
+
+.widget-cmn{
+	@extend %widget;
+	background: #fff;border: 1px solid  #ddd;border-radius: .3rem;
+	> .widget-header{
+		padding: ($line-height / 3) .9rem (($line-height / 3) - .1);border-bottom: .1rem solid #ddd;
+	}
+	&.list-view{
+		> .widget-header{
+			border-bottom: 0;
+		}
 	}
 }
 
