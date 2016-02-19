@@ -3,7 +3,7 @@
 
 .btn-cmn{
 	margin: 0;padding: ($line-height / 2) .9rem;text-align: center;border: 1px solid  #ddd;border-radius: .3em;background: #fff;cursor: pointer;transition: .3s;
-	&:hover,&:focus{
+	&:hover,&:focus,&.active{
 		background: $color-hover;color: #fff;border-color: darken($color-hover, 10%);
 	}
 }
